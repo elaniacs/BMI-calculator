@@ -16,7 +16,6 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,8 +45,8 @@ class CalculateViewController: UIViewController {
             // ViewController instance
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.bmiValue = calculatorBrain.getBMIValue()
+            destinationVC.advice = calculatorBrain.getAdvice()
+            destinationVC.color = calculatorBrain.getColor()
         }
     }
 }
-
-
